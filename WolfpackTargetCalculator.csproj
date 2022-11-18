@@ -180,6 +180,8 @@
     <None Remove="images\rtt7.bmp" />
     <None Remove="images\rtt8.bmp" />
     <None Remove="images\rtt9.bmp" />
+    <None Remove="images\subsim.bmp" />
+    <None Remove="images\subsim.png" />
     <None Remove="images\wbac.bmp" />
     <None Remove="images\wbcs.bmp" />
     <None Remove="images\wfcc.bmp" />
@@ -360,6 +362,8 @@
     <EmbeddedResource Include="images\rtt7.bmp" />
     <EmbeddedResource Include="images\rtt8.bmp" />
     <EmbeddedResource Include="images\rtt9.bmp" />
+    <EmbeddedResource Include="images\subsim.bmp" />
+    <EmbeddedResource Include="images\subsim.png" />
     <EmbeddedResource Include="images\wbac.bmp" />
     <EmbeddedResource Include="images\wbcs.bmp" />
     <EmbeddedResource Include="images\wfcc.bmp" />

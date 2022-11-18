@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +24,9 @@ namespace WolfpackTargetCalculator
         {
             InitializeComponent();
             ResetFormComponents();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWTC));
+            WTCMain.DefaultShip = (Image)resources.GetObject("pbShipImage.Image");
+            pbShipImage.Image = WTCMain.DefaultShip;
         }
 
         private void ResetFormComponents()
@@ -39,7 +44,7 @@ namespace WolfpackTargetCalculator
             cbIAft.Checked = false;
             lbShipList.Items.Clear();
             tbMasts.Text = null;
-            pbShipImage.Image = null;
+            pbShipImage.Image = WTCMain.DefaultShip;
             tbTSTonnage.Text = null;
             tbTSBeam.Text = null;
             tbTSMaxSpeed.Text = null;
@@ -245,7 +250,7 @@ namespace WolfpackTargetCalculator
             }
             lbShipList.Items.Clear();
             lbShipList.SelectedItem = null;
-            pbShipImage.Image = null;
+            pbShipImage.Image = WTCMain.DefaultShip;
             bLockShip.Text = "No Ship Selected Unlocked";
             WTCMain.CurrentShipSelection = null;
             for (int i = 0; i < filtered.Count; i++)
@@ -547,6 +552,14 @@ namespace WolfpackTargetCalculator
         private void bTargetRecognitionGroup_Click(object sender, EventArgs e)
         {
             ToggleRecognitionGroupBox();
+        }
+
+        private void pbShipImage_Click(object sender, EventArgs e)
+        {
+            if (pbShipImage.Image == WTCMain.DefaultShip)
+            {
+                Process.Start(new ProcessStartInfo("https://www.subsim.com") { UseShellExecute = true });
+            }
         }
     }
 }

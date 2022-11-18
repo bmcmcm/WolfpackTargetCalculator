@@ -12,6 +12,8 @@ using System.Drawing;
 using System.IO;
 using System.Text.Json;
 using System.Reflection;
+using WolfpackTargetCalculator.Properties;
+using System.Resources;
 
 namespace WolfpackTargetCalculator
 {
@@ -49,7 +51,7 @@ namespace WolfpackTargetCalculator
         public static string MastsFilter = "";
         public const string Title = "Wolfpack Target Calculator V1b, 'Der Alte' Approved, Copyright 2022 Brian McMahon, Released Under GPLv3";
         public static string LocalPath = Path.Combine(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\")));
-
+        public static Image DefaultShip;
 
         /// <summary>
         /// The main entry point for the application.
@@ -87,13 +89,12 @@ namespace WolfpackTargetCalculator
 
                 var assembly = Assembly.GetExecutingAssembly();
                 var resourceName = "WolfpackTargetCalculator.shipdata.json";
-                //var showitall = assembly.GetManifestResourceNames();
+                var showitall = assembly.GetManifestResourceNames();
                 StreamReader file = new(assembly.GetManifestResourceStream(resourceName));
                 string jsonString = file.ReadToEnd();
                 file.Close();
                 file.Dispose();
                 ImportedShipDataList = JsonSerializer.Deserialize<List<ImportedShipdata>>(jsonString);
-
                 foreach (ImportedShipdata ship in ImportedShipDataList)
                 {
 

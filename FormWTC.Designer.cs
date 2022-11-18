@@ -309,6 +309,7 @@ namespace WolfpackTargetCalculator
             // 
             // pbShipImage
             // 
+            this.pbShipImage.Image = ((System.Drawing.Image)(resources.GetObject("pbShipImage.Image")));
             this.pbShipImage.InitialImage = null;
             this.pbShipImage.Location = new System.Drawing.Point(512, 18);
             this.pbShipImage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -317,6 +318,7 @@ namespace WolfpackTargetCalculator
             this.pbShipImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbShipImage.TabIndex = 95;
             this.pbShipImage.TabStop = false;
+            this.pbShipImage.Click += new System.EventHandler(this.pbShipImage_Click);
             // 
             // bLockShip
             // 

@@ -91,6 +91,7 @@ namespace WolfpackTargetCalculator
             this.label10 = new System.Windows.Forms.Label();
             this.bFormBorder = new System.Windows.Forms.Button();
             this.bTargetRecognitionGroup = new System.Windows.Forms.Button();
+            this.bCollapse = new System.Windows.Forms.Button();
             this.gbTargetRecognition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbShipImage)).BeginInit();
             this.gbObservations.SuspendLayout();
@@ -873,7 +874,7 @@ namespace WolfpackTargetCalculator
             this.bApproachingBowLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bApproachingBowLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bApproachingBowLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bApproachingBowLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bApproachingBowLeft.ForeColor = System.Drawing.Color.DarkGray;
             this.bApproachingBowLeft.Location = new System.Drawing.Point(6, 18);
             this.bApproachingBowLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bApproachingBowLeft.Name = "bApproachingBowLeft";
@@ -1029,10 +1030,10 @@ namespace WolfpackTargetCalculator
             this.bFormBorder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bFormBorder.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bFormBorder.ForeColor = System.Drawing.Color.Red;
-            this.bFormBorder.Location = new System.Drawing.Point(1113, 262);
+            this.bFormBorder.Location = new System.Drawing.Point(1072, 262);
             this.bFormBorder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bFormBorder.Name = "bFormBorder";
-            this.bFormBorder.Size = new System.Drawing.Size(193, 35);
+            this.bFormBorder.Size = new System.Drawing.Size(116, 35);
             this.bFormBorder.TabIndex = 93;
             this.bFormBorder.Text = "Toggle Form Border";
             this.bFormBorder.UseVisualStyleBackColor = false;
@@ -1048,11 +1049,27 @@ namespace WolfpackTargetCalculator
             this.bTargetRecognitionGroup.Location = new System.Drawing.Point(892, 262);
             this.bTargetRecognitionGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bTargetRecognitionGroup.Name = "bTargetRecognitionGroup";
-            this.bTargetRecognitionGroup.Size = new System.Drawing.Size(213, 35);
+            this.bTargetRecognitionGroup.Size = new System.Drawing.Size(172, 35);
             this.bTargetRecognitionGroup.TabIndex = 94;
             this.bTargetRecognitionGroup.Text = "Toggle Target Recognition Panel";
             this.bTargetRecognitionGroup.UseVisualStyleBackColor = false;
             this.bTargetRecognitionGroup.Click += new System.EventHandler(this.bTargetRecognitionGroup_Click);
+            // 
+            // bCollapse
+            // 
+            this.bCollapse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bCollapse.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bCollapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bCollapse.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bCollapse.ForeColor = System.Drawing.Color.Red;
+            this.bCollapse.Location = new System.Drawing.Point(1196, 262);
+            this.bCollapse.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.bCollapse.Name = "bCollapse";
+            this.bCollapse.Size = new System.Drawing.Size(109, 35);
+            this.bCollapse.TabIndex = 95;
+            this.bCollapse.Text = "Collapse";
+            this.bCollapse.UseVisualStyleBackColor = false;
+            this.bCollapse.Click += new System.EventHandler(this.bCollapse_Click);
             // 
             // FormWTC
             // 
@@ -1060,6 +1077,7 @@ namespace WolfpackTargetCalculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1318, 308);
+            this.Controls.Add(this.bCollapse);
             this.Controls.Add(this.bTargetRecognitionGroup);
             this.Controls.Add(this.bFormBorder);
             this.Controls.Add(this.gbETD);
@@ -1067,7 +1085,7 @@ namespace WolfpackTargetCalculator
             this.Controls.Add(this.gbTargetRecognition);
             this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Red;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1150,5 +1168,6 @@ namespace WolfpackTargetCalculator
         private Label label10;
         private Button bFormBorder;
         private Button bTargetRecognitionGroup;
+        private Button bCollapse;
     }
 }

@@ -20,6 +20,8 @@ namespace WolfpackTargetCalculator
         int mastHeight = 0;
         int shipLength = 0;
         string shipAspect = "ABL";
+        int lastFormX = 0;
+        int lastFormY = 0;
         public FormWTC()
         {
             InitializeComponent();
@@ -530,6 +532,7 @@ namespace WolfpackTargetCalculator
                 this.gbETD.Left = 3 + this.gbObservations.Right;
                 this.bTargetRecognitionGroup.Left = 7;
                 this.bFormBorder.Left = 3 + this.bTargetRecognitionGroup.Right;
+                this.bCollapse.Left = 3 + this.bFormBorder.Right;
                 this.Width = 28 + this.gbObservations.Width + this.gbETD.Width;
                 this.Location = new System.Drawing.Point(x + 3 + this.gbTargetRecognition.Width,y);
             } else
@@ -538,6 +541,7 @@ namespace WolfpackTargetCalculator
                 this.gbETD.Left = 3 + this.gbObservations.Right;
                 this.bTargetRecognitionGroup.Left = 3 + this.gbTargetRecognition.Right;
                 this.bFormBorder.Left = 3 + this.bTargetRecognitionGroup.Right;
+                this.bCollapse.Left = 3 + this.bFormBorder.Right;
                 this.gbTargetRecognition.Visible = true;
                 this.Width = 34 + this.gbTargetRecognition.Width + this.gbObservations.Width + this.gbETD.Width;
                 this.Location = new System.Drawing.Point(x - 3 - this.gbTargetRecognition.Width, y);
@@ -559,6 +563,47 @@ namespace WolfpackTargetCalculator
             if (pbShipImage.Image == WTCMain.DefaultShip)
             {
                 Process.Start(new ProcessStartInfo("https://www.subsim.com") { UseShellExecute = true });
+            }
+        }
+
+        private void bCollapse_Click(object sender, EventArgs e)
+        {
+
+            if (this.gbETD.Visible == true)
+            {
+                if (this.FormBorderStyle == FormBorderStyle.FixedDialog)
+                {
+                    ToggleFormBorder();
+                }
+                if (this.gbTargetRecognition.Visible)
+                {
+                    ToggleRecognitionGroupBox();
+                }
+                int x = this.Location.X + this.Width - bCollapse.Width - 8;
+                int y = this.Location.Y + this.Height - bCollapse.Height - 8;
+                lastFormX = this.Location.X;
+                lastFormY = this.Location.Y;
+                this.gbObservations.Visible = false;
+                this.gbETD.Visible = false;
+                this.bFormBorder.Visible = false;
+                this.bTargetRecognitionGroup.Visible = false;
+                this.Width = 8 + bCollapse.Width;
+                this.Height = 8 + bCollapse.Height;
+                this.bCollapse.Left = 3;
+                this.bCollapse.Top = 3;
+                this.Location = new System.Drawing.Point(x, y);
+            }
+            else
+            {
+                this.gbObservations.Visible = true;
+                this.gbETD.Visible = true;
+                this.bFormBorder.Visible = true;
+                this.bTargetRecognitionGroup.Visible = true;
+                this.bCollapse.Left = 4 + this.bFormBorder.Right;
+                this.bCollapse.Top = this.bFormBorder.Top;
+                this.Width = this.Width = 34 + this.gbObservations.Width + this.gbETD.Width;
+                this.Height = 20 + gbTargetRecognition.Height;
+                this.Location = new System.Drawing.Point(lastFormX, lastFormY);
             }
         }
     }

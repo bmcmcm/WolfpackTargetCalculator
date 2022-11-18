@@ -67,7 +67,7 @@ namespace WolfpackTargetCalculator
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.bgObservations = new System.Windows.Forms.GroupBox();
+            this.gbObservations = new System.Windows.Forms.GroupBox();
             this.numTargetPassTime = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.numHorizontalMeasurement = new System.Windows.Forms.NumericUpDown();
@@ -80,7 +80,7 @@ namespace WolfpackTargetCalculator
             this.bApproachingBowRight = new System.Windows.Forms.Button();
             this.bApproachingBowLeft = new System.Windows.Forms.Button();
             this.bRecedingBowLeft = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbETD = new System.Windows.Forms.GroupBox();
             this.tbEstSpeed = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.tbAOB = new System.Windows.Forms.TextBox();
@@ -89,18 +89,21 @@ namespace WolfpackTargetCalculator
             this.tbEstRange = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.bFormBorder = new System.Windows.Forms.Button();
+            this.bTargetRecognitionGroup = new System.Windows.Forms.Button();
             this.gbTargetRecognition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbShipImage)).BeginInit();
-            this.bgObservations.SuspendLayout();
+            this.gbObservations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTargetPassTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHorizontalMeasurement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVerticalMeasurement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTargetBearing)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbETD.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbTargetRecognition
             // 
+            this.gbTargetRecognition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gbTargetRecognition.Controls.Add(this.tbTSBeam);
             this.gbTargetRecognition.Controls.Add(this.tbTSMaxSpeed);
             this.gbTargetRecognition.Controls.Add(this.tbTSDraught);
@@ -136,8 +139,10 @@ namespace WolfpackTargetCalculator
             this.gbTargetRecognition.Controls.Add(this.label16);
             this.gbTargetRecognition.Controls.Add(this.label15);
             this.gbTargetRecognition.Controls.Add(this.label14);
+            this.gbTargetRecognition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbTargetRecognition.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gbTargetRecognition.Location = new System.Drawing.Point(11, 11);
+            this.gbTargetRecognition.ForeColor = System.Drawing.Color.Red;
+            this.gbTargetRecognition.Location = new System.Drawing.Point(11, 10);
             this.gbTargetRecognition.Margin = new System.Windows.Forms.Padding(2);
             this.gbTargetRecognition.Name = "gbTargetRecognition";
             this.gbTargetRecognition.Padding = new System.Windows.Forms.Padding(2);
@@ -148,8 +153,10 @@ namespace WolfpackTargetCalculator
             // 
             // tbTSBeam
             // 
+            this.tbTSBeam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbTSBeam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTSBeam.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbTSBeam.ForeColor = System.Drawing.Color.Red;
             this.tbTSBeam.Location = new System.Drawing.Point(594, 223);
             this.tbTSBeam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbTSBeam.Name = "tbTSBeam";
@@ -160,8 +167,10 @@ namespace WolfpackTargetCalculator
             // 
             // tbTSMaxSpeed
             // 
+            this.tbTSMaxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbTSMaxSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTSMaxSpeed.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbTSMaxSpeed.ForeColor = System.Drawing.Color.Red;
             this.tbTSMaxSpeed.Location = new System.Drawing.Point(594, 254);
             this.tbTSMaxSpeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbTSMaxSpeed.Name = "tbTSMaxSpeed";
@@ -172,8 +181,10 @@ namespace WolfpackTargetCalculator
             // 
             // tbTSDraught
             // 
+            this.tbTSDraught.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbTSDraught.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTSDraught.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbTSDraught.ForeColor = System.Drawing.Color.Red;
             this.tbTSDraught.Location = new System.Drawing.Point(790, 193);
             this.tbTSDraught.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbTSDraught.Name = "tbTSDraught";
@@ -184,8 +195,10 @@ namespace WolfpackTargetCalculator
             // 
             // tbTSLength
             // 
+            this.tbTSLength.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbTSLength.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTSLength.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbTSLength.ForeColor = System.Drawing.Color.Red;
             this.tbTSLength.Location = new System.Drawing.Point(790, 223);
             this.tbTSLength.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbTSLength.Name = "tbTSLength";
@@ -196,8 +209,10 @@ namespace WolfpackTargetCalculator
             // 
             // tbTSMastHeight
             // 
+            this.tbTSMastHeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbTSMastHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTSMastHeight.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbTSMastHeight.ForeColor = System.Drawing.Color.Red;
             this.tbTSMastHeight.Location = new System.Drawing.Point(791, 254);
             this.tbTSMastHeight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbTSMastHeight.Name = "tbTSMastHeight";
@@ -208,8 +223,10 @@ namespace WolfpackTargetCalculator
             // 
             // tbTSTonnage
             // 
+            this.tbTSTonnage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbTSTonnage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTSTonnage.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbTSTonnage.ForeColor = System.Drawing.Color.Red;
             this.tbTSTonnage.Location = new System.Drawing.Point(594, 193);
             this.tbTSTonnage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbTSTonnage.Name = "tbTSTonnage";
@@ -303,9 +320,12 @@ namespace WolfpackTargetCalculator
             // 
             // bLockShip
             // 
-            this.bLockShip.BackColor = System.Drawing.SystemColors.Control;
+            this.bLockShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bLockShip.Enabled = false;
+            this.bLockShip.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bLockShip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLockShip.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bLockShip.ForeColor = System.Drawing.Color.Red;
             this.bLockShip.Location = new System.Drawing.Point(6, 136);
             this.bLockShip.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bLockShip.Name = "bLockShip";
@@ -317,33 +337,43 @@ namespace WolfpackTargetCalculator
             // 
             // lbShipList
             // 
+            this.lbShipList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbShipList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbShipList.ColumnWidth = 60;
             this.lbShipList.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbShipList.ForeColor = System.Drawing.Color.Red;
             this.lbShipList.FormattingEnabled = true;
             this.lbShipList.Location = new System.Drawing.Point(6, 170);
             this.lbShipList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lbShipList.MultiColumn = true;
             this.lbShipList.Name = "lbShipList";
-            this.lbShipList.Size = new System.Drawing.Size(498, 108);
+            this.lbShipList.Size = new System.Drawing.Size(498, 106);
             this.lbShipList.Sorted = true;
             this.lbShipList.TabIndex = 93;
             this.lbShipList.SelectedIndexChanged += new System.EventHandler(this.lbShipList_SelectedIndexChanged);
             // 
             // bClearMasts
             // 
+            this.bClearMasts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bClearMasts.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bClearMasts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bClearMasts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bClearMasts.ForeColor = System.Drawing.Color.Red;
             this.bClearMasts.Location = new System.Drawing.Point(448, 135);
             this.bClearMasts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bClearMasts.Name = "bClearMasts";
             this.bClearMasts.Size = new System.Drawing.Size(56, 30);
             this.bClearMasts.TabIndex = 92;
             this.bClearMasts.Text = "Clear";
-            this.bClearMasts.UseVisualStyleBackColor = true;
+            this.bClearMasts.UseVisualStyleBackColor = false;
             this.bClearMasts.Click += new System.EventHandler(this.bClearMasts_Click);
             // 
             // tbMasts
             // 
+            this.tbMasts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbMasts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMasts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbMasts.ForeColor = System.Drawing.Color.Red;
             this.tbMasts.Location = new System.Drawing.Point(342, 136);
             this.tbMasts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbMasts.MaxLength = 5;
@@ -355,36 +385,48 @@ namespace WolfpackTargetCalculator
             // 
             // bFunnel
             // 
+            this.bFunnel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bFunnel.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bFunnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bFunnel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bFunnel.ForeColor = System.Drawing.Color.Red;
             this.bFunnel.Image = ((System.Drawing.Image)(resources.GetObject("bFunnel.Image")));
             this.bFunnel.Location = new System.Drawing.Point(448, 36);
             this.bFunnel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bFunnel.Name = "bFunnel";
             this.bFunnel.Size = new System.Drawing.Size(56, 90);
             this.bFunnel.TabIndex = 90;
-            this.bFunnel.UseVisualStyleBackColor = true;
+            this.bFunnel.UseVisualStyleBackColor = false;
             this.bFunnel.Click += new System.EventHandler(this.bFunnel_Click);
             // 
             // bKingpost
             // 
+            this.bKingpost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bKingpost.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bKingpost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKingpost.ForeColor = System.Drawing.Color.Red;
             this.bKingpost.Image = ((System.Drawing.Image)(resources.GetObject("bKingpost.Image")));
             this.bKingpost.Location = new System.Drawing.Point(384, 36);
             this.bKingpost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bKingpost.Name = "bKingpost";
             this.bKingpost.Size = new System.Drawing.Size(56, 90);
             this.bKingpost.TabIndex = 89;
-            this.bKingpost.UseVisualStyleBackColor = true;
+            this.bKingpost.UseVisualStyleBackColor = false;
             this.bKingpost.Click += new System.EventHandler(this.bKingpost_Click);
             // 
             // bMast
             // 
+            this.bMast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bMast.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bMast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bMast.ForeColor = System.Drawing.Color.Red;
             this.bMast.Image = ((System.Drawing.Image)(resources.GetObject("bMast.Image")));
             this.bMast.Location = new System.Drawing.Point(320, 36);
             this.bMast.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bMast.Name = "bMast";
             this.bMast.Size = new System.Drawing.Size(56, 90);
             this.bMast.TabIndex = 88;
-            this.bMast.UseVisualStyleBackColor = true;
+            this.bMast.UseVisualStyleBackColor = false;
             this.bMast.Click += new System.EventHandler(this.bMast_Click);
             // 
             // label17
@@ -401,6 +443,7 @@ namespace WolfpackTargetCalculator
             // cbIUnspecified
             // 
             this.cbIUnspecified.AutoSize = true;
+            this.cbIUnspecified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbIUnspecified.Checked = true;
             this.cbIUnspecified.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbIUnspecified.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -410,12 +453,13 @@ namespace WolfpackTargetCalculator
             this.cbIUnspecified.Size = new System.Drawing.Size(90, 16);
             this.cbIUnspecified.TabIndex = 86;
             this.cbIUnspecified.Text = "Unspecified";
-            this.cbIUnspecified.UseVisualStyleBackColor = true;
+            this.cbIUnspecified.UseVisualStyleBackColor = false;
             this.cbIUnspecified.CheckedChanged += new System.EventHandler(this.cbIUnspecified_CheckedChanged);
             // 
             // cbSSUnspecified
             // 
             this.cbSSUnspecified.AutoSize = true;
+            this.cbSSUnspecified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbSSUnspecified.Checked = true;
             this.cbSSUnspecified.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbSSUnspecified.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -425,12 +469,13 @@ namespace WolfpackTargetCalculator
             this.cbSSUnspecified.Size = new System.Drawing.Size(90, 16);
             this.cbSSUnspecified.TabIndex = 85;
             this.cbSSUnspecified.Text = "Unspecified";
-            this.cbSSUnspecified.UseVisualStyleBackColor = true;
+            this.cbSSUnspecified.UseVisualStyleBackColor = false;
             this.cbSSUnspecified.CheckedChanged += new System.EventHandler(this.cbSSUnspecified_CheckedChanged);
             // 
             // cbEUnspecified
             // 
             this.cbEUnspecified.AutoSize = true;
+            this.cbEUnspecified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbEUnspecified.Checked = true;
             this.cbEUnspecified.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbEUnspecified.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -440,12 +485,13 @@ namespace WolfpackTargetCalculator
             this.cbEUnspecified.Size = new System.Drawing.Size(90, 16);
             this.cbEUnspecified.TabIndex = 84;
             this.cbEUnspecified.Text = "Unspecified";
-            this.cbEUnspecified.UseVisualStyleBackColor = true;
+            this.cbEUnspecified.UseVisualStyleBackColor = false;
             this.cbEUnspecified.CheckedChanged += new System.EventHandler(this.cbEUnspecified_CheckedChanged);
             // 
             // cbIAft
             // 
             this.cbIAft.AutoSize = true;
+            this.cbIAft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbIAft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbIAft.Location = new System.Drawing.Point(212, 109);
             this.cbIAft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -453,12 +499,13 @@ namespace WolfpackTargetCalculator
             this.cbIAft.Size = new System.Drawing.Size(40, 16);
             this.cbIAft.TabIndex = 83;
             this.cbIAft.Text = "Aft";
-            this.cbIAft.UseVisualStyleBackColor = true;
+            this.cbIAft.UseVisualStyleBackColor = false;
             this.cbIAft.CheckedChanged += new System.EventHandler(this.cbIAft_CheckedChanged);
             // 
             // cbIAmidship
             // 
             this.cbIAmidship.AutoSize = true;
+            this.cbIAmidship.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbIAmidship.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbIAmidship.Location = new System.Drawing.Point(212, 87);
             this.cbIAmidship.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -466,12 +513,13 @@ namespace WolfpackTargetCalculator
             this.cbIAmidship.Size = new System.Drawing.Size(76, 16);
             this.cbIAmidship.TabIndex = 82;
             this.cbIAmidship.Text = "AmidShip";
-            this.cbIAmidship.UseVisualStyleBackColor = true;
+            this.cbIAmidship.UseVisualStyleBackColor = false;
             this.cbIAmidship.CheckedChanged += new System.EventHandler(this.cbIAmidship_CheckedChanged);
             // 
             // cbIFore
             // 
             this.cbIFore.AutoSize = true;
+            this.cbIFore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbIFore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbIFore.Location = new System.Drawing.Point(212, 65);
             this.cbIFore.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -479,12 +527,13 @@ namespace WolfpackTargetCalculator
             this.cbIFore.Size = new System.Drawing.Size(71, 16);
             this.cbIFore.TabIndex = 81;
             this.cbIFore.Text = "Forward";
-            this.cbIFore.UseVisualStyleBackColor = true;
+            this.cbIFore.UseVisualStyleBackColor = false;
             this.cbIFore.CheckedChanged += new System.EventHandler(this.cbIFore_CheckedChanged);
             // 
             // cbSSPassenger
             // 
             this.cbSSPassenger.AutoSize = true;
+            this.cbSSPassenger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbSSPassenger.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSSPassenger.Location = new System.Drawing.Point(105, 109);
             this.cbSSPassenger.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -492,12 +541,13 @@ namespace WolfpackTargetCalculator
             this.cbSSPassenger.Size = new System.Drawing.Size(83, 16);
             this.cbSSPassenger.TabIndex = 80;
             this.cbSSPassenger.Text = "Passenger";
-            this.cbSSPassenger.UseVisualStyleBackColor = true;
+            this.cbSSPassenger.UseVisualStyleBackColor = false;
             this.cbSSPassenger.CheckedChanged += new System.EventHandler(this.cbSSPassenger_CheckedChanged);
             // 
             // cbSSComposite
             // 
             this.cbSSComposite.AutoSize = true;
+            this.cbSSComposite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbSSComposite.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSSComposite.Location = new System.Drawing.Point(105, 87);
             this.cbSSComposite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -505,12 +555,13 @@ namespace WolfpackTargetCalculator
             this.cbSSComposite.Size = new System.Drawing.Size(83, 16);
             this.cbSSComposite.TabIndex = 79;
             this.cbSSComposite.Text = "Composite";
-            this.cbSSComposite.UseVisualStyleBackColor = true;
+            this.cbSSComposite.UseVisualStyleBackColor = false;
             this.cbSSComposite.CheckedChanged += new System.EventHandler(this.cbSSComposite_CheckedChanged);
             // 
             // cbSSSplit
             // 
             this.cbSSSplit.AutoSize = true;
+            this.cbSSSplit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbSSSplit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSSSplit.Location = new System.Drawing.Point(105, 65);
             this.cbSSSplit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -518,12 +569,13 @@ namespace WolfpackTargetCalculator
             this.cbSSSplit.Size = new System.Drawing.Size(48, 16);
             this.cbSSSplit.TabIndex = 78;
             this.cbSSSplit.Text = "Split";
-            this.cbSSSplit.UseVisualStyleBackColor = true;
+            this.cbSSSplit.UseVisualStyleBackColor = false;
             this.cbSSSplit.CheckedChanged += new System.EventHandler(this.cbSSSplit_CheckedChanged);
             // 
             // cbEAft
             // 
             this.cbEAft.AutoSize = true;
+            this.cbEAft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbEAft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbEAft.Location = new System.Drawing.Point(4, 87);
             this.cbEAft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -531,12 +583,13 @@ namespace WolfpackTargetCalculator
             this.cbEAft.Size = new System.Drawing.Size(40, 16);
             this.cbEAft.TabIndex = 77;
             this.cbEAft.Text = "Aft";
-            this.cbEAft.UseVisualStyleBackColor = true;
+            this.cbEAft.UseVisualStyleBackColor = false;
             this.cbEAft.CheckedChanged += new System.EventHandler(this.cbEAft_CheckedChanged);
             // 
             // cbEAmidship
             // 
             this.cbEAmidship.AutoSize = true;
+            this.cbEAmidship.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbEAmidship.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbEAmidship.Location = new System.Drawing.Point(4, 65);
             this.cbEAmidship.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -544,7 +597,7 @@ namespace WolfpackTargetCalculator
             this.cbEAmidship.Size = new System.Drawing.Size(75, 16);
             this.cbEAmidship.TabIndex = 76;
             this.cbEAmidship.Text = "Amidship";
-            this.cbEAmidship.UseVisualStyleBackColor = true;
+            this.cbEAmidship.UseVisualStyleBackColor = false;
             this.cbEAmidship.CheckedChanged += new System.EventHandler(this.cbEAmidship_CheckedChanged);
             // 
             // label16
@@ -573,42 +626,48 @@ namespace WolfpackTargetCalculator
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(0, 23);
+            this.label14.Location = new System.Drawing.Point(6, 23);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 14);
             this.label14.TabIndex = 73;
             this.label14.Text = "Engine";
             // 
-            // bgObservations
+            // gbObservations
             // 
-            this.bgObservations.Controls.Add(this.numTargetPassTime);
-            this.bgObservations.Controls.Add(this.label18);
-            this.bgObservations.Controls.Add(this.numHorizontalMeasurement);
-            this.bgObservations.Controls.Add(this.numVerticalMeasurement);
-            this.bgObservations.Controls.Add(this.label6);
-            this.bgObservations.Controls.Add(this.label5);
-            this.bgObservations.Controls.Add(this.numTargetBearing);
-            this.bgObservations.Controls.Add(this.label9);
-            this.bgObservations.Controls.Add(this.bRecedingBowRight);
-            this.bgObservations.Controls.Add(this.bApproachingBowRight);
-            this.bgObservations.Controls.Add(this.bApproachingBowLeft);
-            this.bgObservations.Controls.Add(this.bRecedingBowLeft);
-            this.bgObservations.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bgObservations.Location = new System.Drawing.Point(897, 11);
-            this.bgObservations.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.bgObservations.Name = "bgObservations";
-            this.bgObservations.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.bgObservations.Size = new System.Drawing.Size(231, 287);
-            this.bgObservations.TabIndex = 1;
-            this.bgObservations.TabStop = false;
-            this.bgObservations.Text = "Observations";
+            this.gbObservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gbObservations.Controls.Add(this.numTargetPassTime);
+            this.gbObservations.Controls.Add(this.label18);
+            this.gbObservations.Controls.Add(this.numHorizontalMeasurement);
+            this.gbObservations.Controls.Add(this.numVerticalMeasurement);
+            this.gbObservations.Controls.Add(this.label6);
+            this.gbObservations.Controls.Add(this.label5);
+            this.gbObservations.Controls.Add(this.numTargetBearing);
+            this.gbObservations.Controls.Add(this.label9);
+            this.gbObservations.Controls.Add(this.bRecedingBowRight);
+            this.gbObservations.Controls.Add(this.bApproachingBowRight);
+            this.gbObservations.Controls.Add(this.bApproachingBowLeft);
+            this.gbObservations.Controls.Add(this.bRecedingBowLeft);
+            this.gbObservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbObservations.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gbObservations.ForeColor = System.Drawing.Color.Red;
+            this.gbObservations.Location = new System.Drawing.Point(892, 10);
+            this.gbObservations.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbObservations.Name = "gbObservations";
+            this.gbObservations.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbObservations.Size = new System.Drawing.Size(213, 246);
+            this.gbObservations.TabIndex = 1;
+            this.gbObservations.TabStop = false;
+            this.gbObservations.Text = "Observations";
             // 
             // numTargetPassTime
             // 
             this.numTargetPassTime.AccessibleDescription = "Time in seconds passing bow to stern on the parascope vertical";
+            this.numTargetPassTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.numTargetPassTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numTargetPassTime.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.numTargetPassTime.Location = new System.Drawing.Point(8, 235);
+            this.numTargetPassTime.ForeColor = System.Drawing.Color.Red;
+            this.numTargetPassTime.Location = new System.Drawing.Point(10, 207);
             this.numTargetPassTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.numTargetPassTime.Maximum = new decimal(new int[] {
             360,
@@ -621,7 +680,7 @@ namespace WolfpackTargetCalculator
             0,
             0});
             this.numTargetPassTime.Name = "numTargetPassTime";
-            this.numTargetPassTime.Size = new System.Drawing.Size(99, 30);
+            this.numTargetPassTime.Size = new System.Drawing.Size(95, 30);
             this.numTargetPassTime.TabIndex = 53;
             this.numTargetPassTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numTargetPassTime.Value = new decimal(new int[] {
@@ -635,7 +694,7 @@ namespace WolfpackTargetCalculator
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(6, 204);
+            this.label18.Location = new System.Drawing.Point(10, 180);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 24);
@@ -645,14 +704,17 @@ namespace WolfpackTargetCalculator
             // 
             // numHorizontalMeasurement
             // 
+            this.numHorizontalMeasurement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.numHorizontalMeasurement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numHorizontalMeasurement.DecimalPlaces = 1;
             this.numHorizontalMeasurement.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numHorizontalMeasurement.ForeColor = System.Drawing.Color.Red;
             this.numHorizontalMeasurement.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numHorizontalMeasurement.Location = new System.Drawing.Point(122, 235);
+            this.numHorizontalMeasurement.Location = new System.Drawing.Point(106, 207);
             this.numHorizontalMeasurement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.numHorizontalMeasurement.Maximum = new decimal(new int[] {
             259,
@@ -677,14 +739,17 @@ namespace WolfpackTargetCalculator
             // 
             // numVerticalMeasurement
             // 
+            this.numVerticalMeasurement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.numVerticalMeasurement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numVerticalMeasurement.DecimalPlaces = 1;
             this.numVerticalMeasurement.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numVerticalMeasurement.ForeColor = System.Drawing.Color.Red;
             this.numVerticalMeasurement.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numVerticalMeasurement.Location = new System.Drawing.Point(122, 155);
+            this.numVerticalMeasurement.Location = new System.Drawing.Point(106, 142);
             this.numVerticalMeasurement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.numVerticalMeasurement.Maximum = new decimal(new int[] {
             259,
@@ -711,7 +776,7 @@ namespace WolfpackTargetCalculator
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(120, 203);
+            this.label6.Location = new System.Drawing.Point(106, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 24);
@@ -723,7 +788,7 @@ namespace WolfpackTargetCalculator
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(122, 123);
+            this.label5.Location = new System.Drawing.Point(106, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 24);
@@ -733,8 +798,11 @@ namespace WolfpackTargetCalculator
             // 
             // numTargetBearing
             // 
+            this.numTargetBearing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.numTargetBearing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numTargetBearing.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.numTargetBearing.Location = new System.Drawing.Point(8, 155);
+            this.numTargetBearing.ForeColor = System.Drawing.Color.Red;
+            this.numTargetBearing.Location = new System.Drawing.Point(10, 142);
             this.numTargetBearing.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.numTargetBearing.Maximum = new decimal(new int[] {
             360,
@@ -747,7 +815,7 @@ namespace WolfpackTargetCalculator
             0,
             -2147483648});
             this.numTargetBearing.Name = "numTargetBearing";
-            this.numTargetBearing.Size = new System.Drawing.Size(99, 30);
+            this.numTargetBearing.Size = new System.Drawing.Size(95, 30);
             this.numTargetBearing.TabIndex = 23;
             this.numTargetBearing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numTargetBearing.ValueChanged += new System.EventHandler(this.numTargetBearing_ValueChanged);
@@ -757,7 +825,7 @@ namespace WolfpackTargetCalculator
             this.label9.AccessibleDescription = "Target\'s relative bearing from the Uboot position";
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(6, 123);
+            this.label9.Location = new System.Drawing.Point(6, 115);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 24);
@@ -767,10 +835,12 @@ namespace WolfpackTargetCalculator
             // 
             // bRecedingBowRight
             // 
-            this.bRecedingBowRight.BackColor = System.Drawing.Color.LightYellow;
+            this.bRecedingBowRight.BackColor = System.Drawing.Color.DimGray;
+            this.bRecedingBowRight.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bRecedingBowRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bRecedingBowRight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bRecedingBowRight.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRecedingBowRight.Location = new System.Drawing.Point(122, 65);
+            this.bRecedingBowRight.ForeColor = System.Drawing.Color.DarkGray;
+            this.bRecedingBowRight.Location = new System.Drawing.Point(106, 61);
             this.bRecedingBowRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bRecedingBowRight.Name = "bRecedingBowRight";
             this.bRecedingBowRight.Size = new System.Drawing.Size(99, 42);
@@ -781,10 +851,12 @@ namespace WolfpackTargetCalculator
             // 
             // bApproachingBowRight
             // 
-            this.bApproachingBowRight.BackColor = System.Drawing.Color.LightYellow;
+            this.bApproachingBowRight.BackColor = System.Drawing.Color.DimGray;
+            this.bApproachingBowRight.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bApproachingBowRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bApproachingBowRight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bApproachingBowRight.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bApproachingBowRight.Location = new System.Drawing.Point(122, 18);
+            this.bApproachingBowRight.ForeColor = System.Drawing.Color.DarkGray;
+            this.bApproachingBowRight.Location = new System.Drawing.Point(106, 18);
             this.bApproachingBowRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bApproachingBowRight.Name = "bApproachingBowRight";
             this.bApproachingBowRight.Size = new System.Drawing.Size(99, 40);
@@ -796,8 +868,10 @@ namespace WolfpackTargetCalculator
             // bApproachingBowLeft
             // 
             this.bApproachingBowLeft.BackColor = System.Drawing.Color.Red;
+            this.bApproachingBowLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bApproachingBowLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bApproachingBowLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bApproachingBowLeft.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bApproachingBowLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bApproachingBowLeft.Location = new System.Drawing.Point(6, 18);
             this.bApproachingBowLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bApproachingBowLeft.Name = "bApproachingBowLeft";
@@ -809,10 +883,12 @@ namespace WolfpackTargetCalculator
             // 
             // bRecedingBowLeft
             // 
-            this.bRecedingBowLeft.BackColor = System.Drawing.Color.LightYellow;
+            this.bRecedingBowLeft.BackColor = System.Drawing.Color.DimGray;
+            this.bRecedingBowLeft.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bRecedingBowLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bRecedingBowLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bRecedingBowLeft.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRecedingBowLeft.Location = new System.Drawing.Point(6, 65);
+            this.bRecedingBowLeft.ForeColor = System.Drawing.Color.DarkGray;
+            this.bRecedingBowLeft.Location = new System.Drawing.Point(6, 61);
             this.bRecedingBowLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bRecedingBowLeft.Name = "bRecedingBowLeft";
             this.bRecedingBowLeft.Size = new System.Drawing.Size(99, 42);
@@ -821,30 +897,36 @@ namespace WolfpackTargetCalculator
             this.bRecedingBowLeft.UseVisualStyleBackColor = false;
             this.bRecedingBowLeft.Click += new System.EventHandler(this.bRecedingBowLeft_Click);
             // 
-            // groupBox1
+            // gbETD
             // 
-            this.groupBox1.Controls.Add(this.tbEstSpeed);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.tbAOB);
-            this.groupBox1.Controls.Add(this.tbEstHeading);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.tbEstRange);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(1136, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(193, 287);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Estimated Target Data";
+            this.gbETD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gbETD.Controls.Add(this.tbEstSpeed);
+            this.gbETD.Controls.Add(this.label24);
+            this.gbETD.Controls.Add(this.tbAOB);
+            this.gbETD.Controls.Add(this.tbEstHeading);
+            this.gbETD.Controls.Add(this.label20);
+            this.gbETD.Controls.Add(this.tbEstRange);
+            this.gbETD.Controls.Add(this.label19);
+            this.gbETD.Controls.Add(this.label10);
+            this.gbETD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbETD.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gbETD.ForeColor = System.Drawing.Color.Red;
+            this.gbETD.Location = new System.Drawing.Point(1113, 10);
+            this.gbETD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbETD.Name = "gbETD";
+            this.gbETD.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbETD.Size = new System.Drawing.Size(193, 246);
+            this.gbETD.TabIndex = 23;
+            this.gbETD.TabStop = false;
+            this.gbETD.Text = "Estimated Target Data";
             // 
             // tbEstSpeed
             // 
+            this.tbEstSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbEstSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEstSpeed.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbEstSpeed.Location = new System.Drawing.Point(7, 119);
+            this.tbEstSpeed.ForeColor = System.Drawing.Color.Red;
+            this.tbEstSpeed.Location = new System.Drawing.Point(7, 93);
             this.tbEstSpeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbEstSpeed.Name = "tbEstSpeed";
             this.tbEstSpeed.ReadOnly = true;
@@ -856,7 +938,7 @@ namespace WolfpackTargetCalculator
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(7, 102);
+            this.label24.Location = new System.Drawing.Point(7, 76);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(45, 14);
@@ -865,8 +947,11 @@ namespace WolfpackTargetCalculator
             // 
             // tbAOB
             // 
+            this.tbAOB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbAOB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAOB.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbAOB.Location = new System.Drawing.Point(7, 233);
+            this.tbAOB.ForeColor = System.Drawing.Color.Red;
+            this.tbAOB.Location = new System.Drawing.Point(7, 197);
             this.tbAOB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbAOB.Name = "tbAOB";
             this.tbAOB.ReadOnly = true;
@@ -876,8 +961,11 @@ namespace WolfpackTargetCalculator
             // 
             // tbEstHeading
             // 
+            this.tbEstHeading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbEstHeading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEstHeading.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbEstHeading.Location = new System.Drawing.Point(7, 175);
+            this.tbEstHeading.ForeColor = System.Drawing.Color.Red;
+            this.tbEstHeading.Location = new System.Drawing.Point(7, 141);
             this.tbEstHeading.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbEstHeading.Name = "tbEstHeading";
             this.tbEstHeading.ReadOnly = true;
@@ -889,7 +977,7 @@ namespace WolfpackTargetCalculator
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(7, 159);
+            this.label20.Location = new System.Drawing.Point(7, 125);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(56, 14);
@@ -898,8 +986,11 @@ namespace WolfpackTargetCalculator
             // 
             // tbEstRange
             // 
+            this.tbEstRange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbEstRange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEstRange.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbEstRange.Location = new System.Drawing.Point(7, 57);
+            this.tbEstRange.ForeColor = System.Drawing.Color.Red;
+            this.tbEstRange.Location = new System.Drawing.Point(7, 40);
             this.tbEstRange.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbEstRange.Name = "tbEstRange";
             this.tbEstRange.ReadOnly = true;
@@ -911,7 +1002,7 @@ namespace WolfpackTargetCalculator
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(7, 39);
+            this.label19.Location = new System.Drawing.Point(7, 22);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 14);
@@ -922,22 +1013,58 @@ namespace WolfpackTargetCalculator
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(7, 216);
+            this.label10.Location = new System.Drawing.Point(7, 180);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 14);
             this.label10.TabIndex = 0;
             this.label10.Text = "Angle on Bow";
             // 
+            // bFormBorder
+            // 
+            this.bFormBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bFormBorder.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bFormBorder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bFormBorder.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bFormBorder.ForeColor = System.Drawing.Color.Red;
+            this.bFormBorder.Location = new System.Drawing.Point(1113, 262);
+            this.bFormBorder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.bFormBorder.Name = "bFormBorder";
+            this.bFormBorder.Size = new System.Drawing.Size(193, 35);
+            this.bFormBorder.TabIndex = 93;
+            this.bFormBorder.Text = "Toggle Form Border";
+            this.bFormBorder.UseVisualStyleBackColor = false;
+            this.bFormBorder.Click += new System.EventHandler(this.bFormBorder_Click);
+            // 
+            // bTargetRecognitionGroup
+            // 
+            this.bTargetRecognitionGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bTargetRecognitionGroup.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bTargetRecognitionGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTargetRecognitionGroup.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bTargetRecognitionGroup.ForeColor = System.Drawing.Color.Red;
+            this.bTargetRecognitionGroup.Location = new System.Drawing.Point(892, 262);
+            this.bTargetRecognitionGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.bTargetRecognitionGroup.Name = "bTargetRecognitionGroup";
+            this.bTargetRecognitionGroup.Size = new System.Drawing.Size(213, 35);
+            this.bTargetRecognitionGroup.TabIndex = 94;
+            this.bTargetRecognitionGroup.Text = "Toggle Target Recognition Panel";
+            this.bTargetRecognitionGroup.UseVisualStyleBackColor = false;
+            this.bTargetRecognitionGroup.Click += new System.EventHandler(this.bTargetRecognitionGroup_Click);
+            // 
             // FormWTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1342, 306);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.bgObservations);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(1318, 308);
+            this.Controls.Add(this.bTargetRecognitionGroup);
+            this.Controls.Add(this.bFormBorder);
+            this.Controls.Add(this.gbETD);
+            this.Controls.Add(this.gbObservations);
             this.Controls.Add(this.gbTargetRecognition);
             this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -947,14 +1074,14 @@ namespace WolfpackTargetCalculator
             this.gbTargetRecognition.ResumeLayout(false);
             this.gbTargetRecognition.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbShipImage)).EndInit();
-            this.bgObservations.ResumeLayout(false);
-            this.bgObservations.PerformLayout();
+            this.gbObservations.ResumeLayout(false);
+            this.gbObservations.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTargetPassTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHorizontalMeasurement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVerticalMeasurement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTargetBearing)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbETD.ResumeLayout(false);
+            this.gbETD.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -997,7 +1124,7 @@ namespace WolfpackTargetCalculator
         private TextBox tbTSLength;
         private TextBox tbTSMastHeight;
         private TextBox tbTSTonnage;
-        private GroupBox bgObservations;
+        private GroupBox gbObservations;
         private Button bRecedingBowRight;
         private Button bApproachingBowRight;
         private Button bApproachingBowLeft;
@@ -1010,7 +1137,7 @@ namespace WolfpackTargetCalculator
         private Label label5;
         private NumericUpDown numTargetPassTime;
         private Label label18;
-        private GroupBox groupBox1;
+        private GroupBox gbETD;
         private TextBox tbEstSpeed;
         private Label label24;
         private TextBox tbAOB;
@@ -1019,5 +1146,7 @@ namespace WolfpackTargetCalculator
         private TextBox tbEstRange;
         private Label label19;
         private Label label10;
+        private Button bFormBorder;
+        private Button bTargetRecognitionGroup;
     }
 }

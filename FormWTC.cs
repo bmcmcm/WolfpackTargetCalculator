@@ -47,9 +47,9 @@ namespace WolfpackTargetCalculator
             tbTSLength.Text = null;
             tbTSMastHeight.Text = null;
             bApproachingBowLeft.BackColor = Color.Red;
-            bApproachingBowRight.BackColor = Color.LightYellow;
-            bRecedingBowLeft.BackColor = Color.LightYellow;
-            bRecedingBowRight.BackColor = Color.LightYellow;
+            bApproachingBowRight.BackColor = Color.DimGray;
+            bRecedingBowLeft.BackColor = Color.DimGray;
+            bRecedingBowRight.BackColor = Color.DimGray;
             numTargetBearing.Value = 0;
             numTargetPassTime.Value = 60;
             numVerticalMeasurement.Value = 1.0m;
@@ -463,41 +463,90 @@ namespace WolfpackTargetCalculator
         {
             shipAspect = "ABL";
             bApproachingBowLeft.BackColor = Color.Red;
-            bRecedingBowLeft.BackColor = Color.LightYellow;
-            bApproachingBowRight.BackColor = Color.LightYellow;
-            bRecedingBowRight.BackColor = Color.LightYellow;
+            bRecedingBowLeft.BackColor = Color.DimGray;
+            bApproachingBowRight.BackColor = Color.DimGray;
+            bRecedingBowRight.BackColor = Color.DimGray;
             EstimatedTargetData();
         }
 
         private void bRecedingBowLeft_Click(object sender, EventArgs e)
         {
             shipAspect = "RBL";
-            bApproachingBowLeft.BackColor = Color.LightYellow;
+            bApproachingBowLeft.BackColor = Color.DimGray;
             bRecedingBowLeft.BackColor = Color.Red;
-            bApproachingBowRight.BackColor = Color.LightYellow;
-            bRecedingBowRight.BackColor = Color.LightYellow;
+            bApproachingBowRight.BackColor = Color.DimGray;
+            bRecedingBowRight.BackColor = Color.DimGray;
             EstimatedTargetData();
         }
 
         private void bApproachingBowRight_Click(object sender, EventArgs e)
         {
             shipAspect = "ABR";
-            bApproachingBowLeft.BackColor = Color.LightYellow;
-            bRecedingBowLeft.BackColor = Color.LightYellow;
+            bApproachingBowLeft.BackColor = Color.DimGray;
+            bRecedingBowLeft.BackColor = Color.DimGray;
             bApproachingBowRight.BackColor = Color.Green;
-            bRecedingBowRight.BackColor = Color.LightYellow;
+            bRecedingBowRight.BackColor = Color.DimGray;
             EstimatedTargetData();
         }
 
         private void bRecedingBowRight_Click(object sender, EventArgs e)
         {
             shipAspect = "RBR";
-            bApproachingBowLeft.BackColor = Color.LightYellow;
-            bRecedingBowLeft.BackColor = Color.LightYellow;
-            bApproachingBowRight.BackColor = Color.LightYellow;
+            bApproachingBowLeft.BackColor = Color.DimGray;
+            bRecedingBowLeft.BackColor = Color.DimGray;
+            bApproachingBowRight.BackColor = Color.DimGray;
             bRecedingBowRight.BackColor = Color.Green;
             EstimatedTargetData();
         }
 
+        private void ToggleFormBorder()
+        {
+            int x = this.Location.X;
+            int y = this.Location.Y;
+            if (this.FormBorderStyle == FormBorderStyle.None)
+            {
+                this.FormBorderStyle = FormBorderStyle.FixedDialog;
+                this.Location = new System.Drawing.Point(x - 8, y - 30);
+            } else
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.Location = new System.Drawing.Point(x + 8, y + 30);
+            }
+        }
+
+        private void ToggleRecognitionGroupBox()
+        {
+            int x = this.Location.X;
+            int y = this.Location.Y;
+            if (this.gbTargetRecognition.Visible)
+            {
+                this.gbTargetRecognition.Visible = false;
+                this.gbObservations.Left = 7;
+                this.gbETD.Left = 3 + this.gbObservations.Right;
+                this.bTargetRecognitionGroup.Left = 7;
+                this.bFormBorder.Left = 3 + this.bTargetRecognitionGroup.Right;
+                this.Width = 28 + this.gbObservations.Width + this.gbETD.Width;
+                this.Location = new System.Drawing.Point(x + 3 + this.gbTargetRecognition.Width,y);
+            } else
+            {
+                this.gbObservations.Left = 3 + this.gbTargetRecognition.Right;
+                this.gbETD.Left = 3 + this.gbObservations.Right;
+                this.bTargetRecognitionGroup.Left = 3 + this.gbTargetRecognition.Right;
+                this.bFormBorder.Left = 3 + this.bTargetRecognitionGroup.Right;
+                this.gbTargetRecognition.Visible = true;
+                this.Width = 34 + this.gbTargetRecognition.Width + this.gbObservations.Width + this.gbETD.Width;
+                this.Location = new System.Drawing.Point(x - 3 - this.gbTargetRecognition.Width, y);
+            }
+        }
+
+        private void bFormBorder_Click(object sender, EventArgs e)
+        {
+            ToggleFormBorder();
+        }
+
+        private void bTargetRecognitionGroup_Click(object sender, EventArgs e)
+        {
+            ToggleRecognitionGroupBox();
+        }
     }
 }

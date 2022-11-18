@@ -47,7 +47,7 @@ namespace WolfpackTargetCalculator
         public static string SuperstructureFilter = "U";
         public static string IslandsFilter = "U";
         public static string MastsFilter = "";
-        public const string Title = "Wolfpack Target Calculator V1, 'Der Alte' Approved, Copyright 2022 Brian McMahon, Released Under GPLv3";
+        public const string Title = "Wolfpack Target Calculator V1a, 'Der Alte' Approved, Copyright 2022 Brian McMahon, Released Under GPLv3";
         public static string LocalPath = Path.Combine(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\")));
 
 

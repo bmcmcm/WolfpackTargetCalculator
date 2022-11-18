@@ -189,6 +189,7 @@ namespace WolfpackTargetCalculator
                     bLockShip.BackColor = Color.LightBlue;
                     bLockShip.Text = WTCMain.CurrentShipSelection.Description + " Unlocked";
                     lbShipList.Enabled = true;
+                    cbEAft.Enabled = true;
                     cbEAmidship.Enabled = true;
                     cbEUnspecified.Enabled = true;
                     cbIAft.Enabled = true;
@@ -246,6 +247,7 @@ namespace WolfpackTargetCalculator
             lbShipList.SelectedItem = null;
             pbShipImage.Image = null;
             bLockShip.Text = "No Ship Selected Unlocked";
+            WTCMain.CurrentShipSelection = null;
             for (int i = 0; i < filtered.Count; i++)
             {
                 AddlbShipListItem(filtered.ElementAt(i).Name);

@@ -12,6 +12,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace WolfpackTargetCalculator
 {
@@ -61,6 +62,7 @@ namespace WolfpackTargetCalculator
             numTargetPassTime.Value = 60;
             numVerticalMeasurement.Value = 1.0m;
             numHorizontalMeasurement.Value = 2.0m;
+            tbAspect.Text = null;
             tbEstRange.Text = null;
             tbEstHeading.Text = null;
             tbEstSpeed.Text = null;
@@ -72,19 +74,39 @@ namespace WolfpackTargetCalculator
             lbShipList.Items.Add(collectionItem);
         }
 
+        private float Lerp(float firstFloat, float secondFloat, float by)
+        {
+            return firstFloat * (1 - by) + secondFloat * by;
+        }
+
+
         private void EstimatedTargetData()
         {
-            double distanceBias = 0.95;
-            double horizonalBias = 0.2;
+            //Based on Valen's explanation of the periscope markings:
+            //The vertical hash mark distance gap is 10/16 of a degree @ 1.5x.
+            //The horizontal hash mark distance gap is 1/4 of a degree @ 1.5x.
             int targetBearing = (int)numTargetBearing.Value;
             int timeToPass = (int)numTargetPassTime.Value;
             double vertical = (double)numVerticalMeasurement.Value;
             double horizontal = (double)numHorizontalMeasurement.Value;
             decimal speed = (decimal)Math.Round(shipLength * 1.94 / timeToPass, 1);
-            //Distance bias figured out through in-game testing to correct optics/game camera mis-scaling
-            int distance = (int)Math.Round((mastHeight / Math.Tan(vertical / 64) * 6) * distanceBias);
-            //Horizontal bias figured out through in-game testing to correct optics/game camera mis-scaling
-            double aobCalculated = Math.Asin((distance * Math.Tan(horizontal * horizonalBias * (Math.PI / 180))) / (double)shipLength);
+            //The vertical hash marks @6x magnification are 10/64 degrees 
+            int distance = (int)Math.Round(mastHeight / Math.Tan((vertical * 10 / 64) * (Math.PI / 180)));
+            double trueAspect = (double)shipLength / (double)mastHeight;
+            double measuredAspect = (horizontal * 1.625) / vertical;
+            double percentDifference = 100 - (measuredAspect / trueAspect * 100);
+            //It sucks that this is necessary, but somehow the ship's scaling in-game is off by ~15% to ~50% depending on the viewed aspect
+            //The apparent ship length is scaled as the aspect difference changes, based on in-game observations
+            //This is needed because the measured aspect vs the known true aspect doesn't jive with periscope measurements
+            if (percentDifference <= 0) { percentDifference = 0.00001; }
+            if (percentDifference > 50) { percentDifference = 50; }
+            double scalingFactor = 1.14;
+            double apparentShipLength = (double)shipLength * (scalingFactor + (scalingFactor * (percentDifference / 100)));
+            //The horizontal hash marks @6x magnification are 16/64 degrees
+            double aobCalculated = Math.Asin(distance * Math.Tan((horizontal * 16 / 64) * (Math.PI / 180)) / apparentShipLength);
+            //double aobCalculated = Math.Asin(distance * Math.Tan((horizontal * 16 / 64) * (Math.PI / 180)) / (double)shipLength);
+            tbAspect.Text = Math.Round(percentDifference,1).ToString() + "% : " + Math.Round(apparentShipLength,0).ToString();
+
             int aob = 0;
             int heading = 0;
             string aobBlurb = "";
@@ -99,7 +121,7 @@ namespace WolfpackTargetCalculator
                     break;
                 case "ABL":
                     aob = (int)(aobCalculated * 90);
-                    if (aob > 90) { aob = 90; } else if (aob < 0) { aob = 0; }
+                    if (aob > 90) { aob = 90; } else if (aob < 1) { aob = 90; }
                     heading = targetBearing + 180 + aob;
                     aobBlurb = "° Bow Left";
                     break;
@@ -111,7 +133,7 @@ namespace WolfpackTargetCalculator
                     break;
                 case "ABR":
                     aob = (int)(aobCalculated * 90);
-                    if (aob > 90) { aob = 90; } else if (aob < 0) { aob = 0; }
+                    if (aob > 90) { aob = 90; } else if (aob < 1) { aob = 90; }
                     heading = targetBearing + 180 - aob;
                     aobBlurb = "° Bow Right";
                     break;
@@ -606,5 +628,6 @@ namespace WolfpackTargetCalculator
                 this.Location = new System.Drawing.Point(lastFormX, lastFormY);
             }
         }
+
     }
 }
